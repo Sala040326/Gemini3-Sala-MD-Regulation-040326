@@ -1,0 +1,5 @@
+{
+  "name": "Artistic MDRI Flow System",
+  "description": "A production-grade agentic AI application for medical device regulation intelligence with a WOW UI and Pantone-based design system.",
+  "requestFramePermissions": ["geolocation"]
+}

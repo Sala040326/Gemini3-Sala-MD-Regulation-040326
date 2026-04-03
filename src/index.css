@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-card: var(--card);
+  --color-border: var(--border);
+}
+
+@layer base {
+  :root {
+    --primary: #00467F;
+    --secondary: #E5EBF1;
+    --accent: #FFD700;
+    --background: #F8FAFC;
+    --text: #0F172A;
+    --card: #FFFFFF;
+    --border: #E2E8F0;
+  }
+
+  .dark {
+    --background: #020617;
+    --text: #F8FAFC;
+    --card: #0F172A;
+    --border: #1E293B;
+  }
+}
+
+/* Pantone Styles */
+[data-style="classic-blue"] { --primary: #00467F; }
+[data-style="viva-magenta"] { --primary: #BB2649; }
+[data-style="illuminating"] { --primary: #F5DF4D; }
+[data-style="very-peri"] { --primary: #6667AB; }
+[data-style="living-coral"] { --primary: #FF6F61; }
+[data-style="ultra-violet"] { --primary: #5F4B8B; }
+[data-style="greenery"] { --primary: #88B04B; }
+[data-style="rose-quartz"] { --primary: #F7CAC9; }
+[data-style="marsala"] { --primary: #955251; }
+[data-style="radiant-orchid"] { --primary: #B163A3; }
+
+body {
+  @apply bg-background text-text font-sans transition-colors duration-300;
+}
+
+.markdown-body h1 { @apply text-3xl font-bold mb-4; }
+.markdown-body h2 { @apply text-2xl font-bold mb-3 mt-6; }
+.markdown-body h3 { @apply text-xl font-bold mb-2 mt-4; }
+.markdown-body p { @apply mb-4 leading-relaxed; }
+.markdown-body ul { @apply list-disc pl-6 mb-4; }
+.markdown-body table { @apply w-full border-collapse mb-4; }
+.markdown-body th, .markdown-body td { @apply border border-border p-2 text-left; }
+.markdown-body th { @apply bg-secondary/50; }
